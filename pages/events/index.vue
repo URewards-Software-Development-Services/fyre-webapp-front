@@ -62,7 +62,8 @@ export default {
         confirmDelete() {
             this.$store.dispatch("events/delete", this.selectedItem)
             alert('Succesfully Deleted!')
-            location.reload()
+            this.deleteItemDialog = false
+            // location.reload()
         },
         cancelDelete() {
             this.deleteItemDialog = false
@@ -76,8 +77,10 @@ export default {
                 action: "events/add",
                 data: value
             })
-        alert('Successfully Added!')
-        location.reload()
+            alert("Successfully Added!")
+            this.addItemDialog = false
+        // alert('Successfully Added!')
+        // location.reload()
 
 
         },
