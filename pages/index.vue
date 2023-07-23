@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <hero />
     <div>
@@ -25,4 +25,4 @@ export default {
 
 <style>
 
-</style>
+</style> -->

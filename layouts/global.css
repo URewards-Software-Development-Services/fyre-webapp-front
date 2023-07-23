@@ -30,6 +30,19 @@ html {
     transition: opacity 0.5s ease;
 }
 
+.custom-button {
+    border-radius: 14px;
+    padding: 16px 32px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    transform: scale(1.05);
+}
+
 
 
 
@@ -40,4 +53,27 @@ html {
     /* referring directly to the animation's @keyframe declaration */
     animation-duration: 1s;
     /* don't forget to set a duration! */
+}
+
+
+.elevation-1 {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.v-input__slot {
+  border-color: #2196f3;
+  transition: border-color 0.3s;
+}
+
+.v-input__slot:focus {
+  border-color: #1565c0;
+}
+
+.v-icon {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.v-icon:hover {
+  color: #2196f3;
 }

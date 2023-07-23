@@ -1,10 +1,16 @@
 import moment from 'moment';
 var philippines = require('philippines')
-export default ({ app }, inject) => {
+export default ({ app , store}, inject) => {
 
     inject('FormatPrice', value => {
         let val = (value / 1).toFixed(2).replace(",", ".");
         return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }),
+    inject('addForm', value => {
+        const action = value.action
+        const data = value.data
+        store.dispatch(action,data)
+       return true
     }),
     inject('StatusColor', value => {
         if (value == "Rejected") {
